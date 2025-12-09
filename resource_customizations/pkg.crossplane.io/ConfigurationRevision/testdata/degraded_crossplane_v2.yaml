@@ -1,0 +1,15 @@
+apiVersion: pkg.crossplane.io/v1
+kind: ConfigurationRevision
+metadata:
+  name: platform-ref-aws-abc123
+spec:
+  desiredState: Active
+  image: xpkg.upbound.io/upbound/platform-ref-aws:v0.9.0
+  revision: 1
+status:
+  conditions:
+  - lastTransitionTime: "2024-01-15T10:30:00Z"
+    message: "Failed to install XRDs"
+    reason: UnhealthyRevision
+    status: "False"
+    type: RevisionHealthy

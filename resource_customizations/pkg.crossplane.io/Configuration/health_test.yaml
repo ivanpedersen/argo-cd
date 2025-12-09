@@ -1,0 +1,17 @@
+tests:
+- healthStatus:
+    status: Healthy
+    message: HealthyPackageRevision
+  inputPath: testdata/healthy.yaml
+- healthStatus:
+    status: Degraded
+    message: "Failed to install dependencies"
+  inputPath: testdata/degraded.yaml
+- healthStatus:
+    status: Progressing
+    message: Installing configuration...
+  inputPath: testdata/progressing_noStatus.yaml
+- healthStatus:
+    status: Progressing
+    message: InstallingPackage
+  inputPath: testdata/progressing.yaml

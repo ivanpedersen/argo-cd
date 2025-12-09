@@ -1,0 +1,24 @@
+tests:
+# Crossplane v1.x tests (Healthy condition)
+- healthStatus:
+    status: Healthy
+    message: HealthyPackageRevision
+  inputPath: testdata/healthy_crossplane_v1.yaml
+- healthStatus:
+    status: Degraded
+    message: "Failed to start function runtime"
+  inputPath: testdata/degraded_crossplane_v1.yaml
+# Crossplane v2.x tests (RevisionHealthy + RuntimeHealthy)
+- healthStatus:
+    status: Healthy
+    message: "Function revision is healthy"
+  inputPath: testdata/healthy_crossplane_v2.yaml
+- healthStatus:
+    status: Degraded
+    message: "Function deployment not ready"
+  inputPath: testdata/degraded_crossplane_v2.yaml
+# No status
+- healthStatus:
+    status: Progressing
+    message: Installing function revision...
+  inputPath: testdata/progressing_noStatus.yaml

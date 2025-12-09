@@ -15,3 +15,16 @@ tests:
     status: Healthy
     message: ActivePackageRevision HealthyPackageRevision
   inputPath: testdata/healthy.yaml
+# Tests for Crossplane v2.x (single Healthy condition)
+- healthStatus:
+    status: Healthy
+    message: HealthyPackageRevision
+  inputPath: testdata/healthy_crossplane_v2.yaml
+- healthStatus:
+    status: Degraded
+    message: "Failed to pull package: image not found"
+  inputPath: testdata/degraded_crossplane_v2.yaml
+- healthStatus:
+    status: Progressing
+    message: InstallingPackage
+  inputPath: testdata/progressing_crossplane_v2.yaml

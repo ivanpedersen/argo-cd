@@ -1,0 +1,13 @@
+tests:
+- healthStatus:
+    status: Healthy
+    message: HealthyPackageRevision
+  inputPath: testdata/healthy.yaml
+- healthStatus:
+    status: Degraded
+    message: "Function runtime failed to start"
+  inputPath: testdata/degraded.yaml
+- healthStatus:
+    status: Progressing
+    message: Installing function...
+  inputPath: testdata/progressing_noStatus.yaml

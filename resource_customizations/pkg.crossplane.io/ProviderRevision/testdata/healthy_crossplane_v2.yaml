@@ -1,0 +1,18 @@
+apiVersion: pkg.crossplane.io/v1
+kind: ProviderRevision
+metadata:
+  name: provider-aws-s3-abc123
+spec:
+  desiredState: Active
+  image: xpkg.upbound.io/upbound/provider-aws-s3:v1.1.0
+  revision: 1
+status:
+  conditions:
+  - lastTransitionTime: "2024-01-15T10:30:00Z"
+    reason: HealthyRevision
+    status: "True"
+    type: RevisionHealthy
+  - lastTransitionTime: "2024-01-15T10:30:00Z"
+    reason: RuntimeHealthy
+    status: "True"
+    type: RuntimeHealthy
